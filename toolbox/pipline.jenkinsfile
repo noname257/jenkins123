@@ -10,11 +10,11 @@ pipeline  {
         timestamps()
     }
     stages {
-        stage("Test pipline") {
+        stage("Start python") {
             steps {
                 echo 'Creating docker image ...'
                 dir('.'){
-                    sh "echo hello pipline "
+                    sh "python3 start.py "
                 }
             }
         }
